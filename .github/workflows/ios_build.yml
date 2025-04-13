@@ -13,7 +13,7 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.10.5'
+          flutter-version: '3.29.2'
           architecture: x64  # 確保使用 x64 架構
 
       - name: Install Dependencies
