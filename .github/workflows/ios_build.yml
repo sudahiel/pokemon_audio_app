@@ -13,16 +13,25 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.10.5'  # 使用特定 Flutter 版本
+          flutter-version: '3.10.5'
+          architecture: x64  # 確保使用 x64 架構
 
       - name: Install Dependencies
         run: flutter pub get
 
+      - name: Install CocoaPods
+        run: sudo gem install cocoapods
+
+      - name: Install iOS Dependencies
+        run: |
+          cd ios
+          pod install
+
       - name: Build iOS App
-        run: flutter build ios
+        run: flutter build ios --no-codesign
 
       - name: Upload iOS Build Artifact
         uses: actions/upload-artifact@v4
         with:
           name: iOS App
-          path: build/ios/iphoneos
+          path: build/ios/iphoneos/Runner.app
