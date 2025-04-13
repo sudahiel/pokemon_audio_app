@@ -36,7 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   tflite_flutter: ^0.11.0
   flutter_sound: ^9.28.0
-  mobile_ffmpeg-full: ^4.4.1  # ✅ 取代 flutter_ffmpeg
+  flutter_ffmpeg: ^0.4.2  # ✅ 取代 flutter_ffmpeg
   tflite_web: ^0.3.0
 
 dev_dependencies:
