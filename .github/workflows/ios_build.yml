@@ -13,7 +13,7 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: 'latest'
+          flutter-version: '3.10.5'  # 使用特定 Flutter 版本
 
       - name: Install Dependencies
         run: flutter pub get
